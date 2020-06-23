@@ -1,0 +1,6 @@
+{
+    // preset-env ele indetifica que estamos trabalhando com browser
+    // para converter as feteures do es6
+    // no node, não precisaria converter pois o node já entende algumas coisas
+    "presets": ["@babel/preset-env"]
+}
