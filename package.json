@@ -9,6 +9,16 @@
     "@babel/preset-env": "^7.10.3"
   },
   "scripts": {
-    "dev": "babel ./main.js -o ./bundle.js -w"
-  }
+    "deve": "babel ./main.js -o ./bundle.js -w"
+  },
+  "description": "A pasta \"node_modules\" está dentro de .gitignore, para instalar as dependências, execute: <b> yarn install ~ ou ~ npm i </b>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brenolapreza/curso-es6.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/brenolapreza/curso-es6/issues"
+  },
+  "homepage": "https://github.com/brenolapreza/curso-es6#readme"
 }

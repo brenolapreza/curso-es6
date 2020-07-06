@@ -6,18 +6,32 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Teste = /*#__PURE__*/function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
-  }
+//foi criado uma classe com o método constructor para pode instaciar
+var TodoList = /*#__PURE__*/function () {
+  function TodoList() {
+    _classCallCheck(this, TodoList);
 
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "outro",
-    value: function outro() {}
+    //crio uma variável que recebe uma array vazia.
+    this.todos = [];
+  } //criou um método (bem parecido com function)
+
+
+  _createClass(TodoList, [{
+    key: "addTodo",
+    value: function addTodo() {
+      //esse método recebeu o .push para add uma array nova
+      this.todos.push('Novo Todo');
+      console.log(this.todos);
+    }
   }]);
 
-  return Teste;
-}();
+  return TodoList;
+}(); // foi instaciado o TodoList
+
+
+var minhaLista = new TodoList(); //toda vez que clica no botão, cria uma nova instância e repete todos os métodos estabelecidos
+
+document.getElementById('novotodo').onclick = function () {
+  //uma função que retorna o addTodo()
+  minhaLista.addTodo();
+};
