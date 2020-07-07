@@ -1,22 +1,39 @@
-//herança
-class List{
-    constructor(){
-        this.data = [];
-    }
+// ##### map ##### 
+const arr = [1, 2, 3, 4, 5, 6]
 
-    add(data){
-        this.data.push(data)
-        console.log(this.data)
-    }
-}
+/*
+const percArr = arr.map(function(item){
+    return item + 2
+})
 
-//extendendo List (herdando)
-class TodoList extends List{
+console.log(percArr)
+*/
 
-}
+// ##### reduce ##### 
+/*
+const redArr = arr.reduce(function(total, next){
+    return total + next
+})
+//0 + 1 = 1
+//1 + 2 = 3
+//3 + 3 = 6
+//6 + 4 = 10
+//10 + 5 = 15
+//15 + 6 = 21
 
-const minhaLista = new TodoList();
+console.log(redArr);
+*/
 
-document.getElementById('novotodo').onclick = function(){
-    minhaLista.add('Novo Todo');
-}
+// ##### filter ##### 
+/*
+const filtro = arr.filter(function(item){
+    return item % 2 === 0;
+})
+console.log(filtro)
+*/
+
+// ##### find ##### 
+const procurar = arr.find(function(item){
+    return item === 9
+})
+console.log(procurar)
